@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiMvvmDemo.Pages.EmployeeDetailPage"
+             Title="Employee Details"
+             xmlns:vm="clr-namespace:MauiMvvmDemo.Models.ViewModels"
+             x:DataType="vm:EmployeeDetailViewModel2">
+    <TableView Intent="Data">
+        <TableRoot>
+            <TableSection Title="Basic Information">
+                <TextCell Text="Employee ID" Detail="{Binding Employee.EmployeeId}" />
+                <TextCell Text="Name" Detail="{Binding Employee.EmployeeName}" />
+                <TextCell Text="Email" Detail="{Binding Employee.Email}" />
+                <SwitchCell Text="Is Part-Timer" On="{Binding Employee.IsPartTimer}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
